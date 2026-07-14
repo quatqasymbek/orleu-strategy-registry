@@ -10,7 +10,10 @@ import streamlit as st
 from sqlalchemy import insert, select, update
 
 from database import audit, execute, fetch_one, get_engine, users, utcnow
+from export_patch import install_export_patch
 from reference_data import DEPARTMENTS
+
+install_export_patch()
 
 ROLE_DEPARTMENT = "department"
 ROLE_CHAIRMAN = "chairman"
